@@ -13,11 +13,10 @@ public class App {
             System.out.println("\n");
 
             for(int i = 1; i <= size; i++) {
-                String letter = Integer.toString(i);
-                String line = letter.repeat(i);
+
+                String line = Integer.toString(i).repeat(i);
 
                 System.out.println(line.substring(0, i));
-
             }
             
         } catch (java.util.InputMismatchException e) {
