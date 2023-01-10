@@ -20,10 +20,17 @@ public class App {
 
             }
             
-        } catch (Exception e) {
-            // TODO: handle exception
+        } catch (java.util.InputMismatchException e) {
+            error = true;
+
+            System.out.println("\n-------------");
+            System.out.println("Houve um erro: \"" + e.getClass().getSimpleName() + "\".\nVocê pode tentar de novo!\nUse apenas números e não tente\nconstruir uma pirâmide real.\nVem tranquilo! =)");
+            System.out.println("-------------\n");
+
         } finally {
-            System.out.println("\nFeito =D\n");
+            if(!error) {
+                System.out.println("\nVocê já está pronto para o /\\ TelexFree /\\\n");
+            }
         }
     }
 }
